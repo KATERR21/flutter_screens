@@ -43,16 +43,16 @@ Widget navDrawer(context) =>
                       borderRadius: BorderRadius.all(Radius.circular(50.0))
                   ),
                   child: Image.network(
-                      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Google-flutter-logo.svg/330px-Google-flutter-logo.svg.png"),
+                      'https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Google-flutter-logo.svg/330px-Google-flutter-logo.svg.png'),
                 ),
-                const Text("Навигация во Flutter")
+                const Text('Навигация во Flutter')
               ],
             ),
           ),
         ),
         ListTile(
           leading: const Icon(Icons.home),
-          title: const Text("Главная"),
+          title: const Text('Главная'),
           onTap: () {
             //Navigator.pop(context);
             Navigator.pushNamed(context, '/');
@@ -60,21 +60,26 @@ Widget navDrawer(context) =>
         ),
         ListTile(
           leading: const Icon(Icons.widgets),
-          title: const Text("Каталог"),
+          title: const Text('Каталог'),
           onTap: () {
             Navigator.pushNamed(context, '/catalog');
           },
         ),
         ListTile(
           leading: const Icon(Icons.shopping_bag_outlined),
-          title: const Text("Корзина"),
+          title: const Text('Корзина'),
           onTap: () {
             Navigator.pushNamed(context, '/basket');
           },
         ),
+        const Divider(),
+        const Padding(
+          padding: EdgeInsets.only(left: 10),
+          child: Text('Профиль'),
+        ),
         ListTile(
           leading: const Icon(Icons.settings),
-          title: const Text("Настройки"),
+          title: const Text('Настройки'),
           onTap: () {
             Navigator.pushNamed(context, '/setting');
           },
